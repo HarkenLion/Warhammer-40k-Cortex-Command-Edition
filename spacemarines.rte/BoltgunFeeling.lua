@@ -1,8 +1,0 @@
-function Create(self)
-	AudioMan:PlayMusic("spacemarines.rte/Bolt.ogg", -1, -1.0)
-end
-function Update(self)
-	if self.Health <= 0 then
-		AudioMan:StopMusic()
-	end
-end

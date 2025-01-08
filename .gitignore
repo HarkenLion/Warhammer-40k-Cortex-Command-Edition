@@ -1,0 +1,13 @@
+*.zip
+.vscode
+/.vs
+/*.rte
+!SpaceMarines.rte
+!imperialguard.rte
+!deathkorps.rte
+!chaosspacemarines.rte
+!chaoscultists.rte
+!orks.rte
+!tau.rte
+!necrons.rte
+/Extensions
