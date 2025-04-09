@@ -1,5 +1,5 @@
 dofile("Base.rte/Constants.lua")
-dofile("tau.rte/Scripts/AI/NativeTauAI.lua")
+dofile("Tau.rte/Scripts/AI/NativeTauAI.lua")
 
 function Create(self)
 	self.enableselect = true

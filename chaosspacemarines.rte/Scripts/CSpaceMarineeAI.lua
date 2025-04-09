@@ -1,6 +1,6 @@
 dofile("Base.rte/Constants.lua")
 require("AI/NativeHumanAI") --dofile("Base.rte/AI/NativeHumanAI.lua")
-package.path = package.path .. ";Mods/chaosspacemarines.rte/?.lua"
+package.path = package.path .. ";Mods/ChaosSpaceMarines.rte/?.lua"
 require("Scripts/CMarineAIBehaviourss")
 
 function Create(self)
@@ -9,16 +9,16 @@ function Create(self)
 
 	-- Start modded code --
 
-	self.RTE = "chaosspacemarines.rte"
-	self.baseRTE = "chaosspacemarines.rte"
+	self.RTE = "ChaosSpaceMarines.rte"
+	self.baseRTE = "ChaosSpaceMarines.rte"
 
 	self.voiceSounds = {
-		Death = CreateSoundContainer("VO Death Variant One", "chaosspacemarines.rte"),
-		Spot = CreateSoundContainer("VO Spot Variant One", "chaosspacemarines.rte"),
-		Shoot = CreateSoundContainer("VO Shoot Variant One", "chaosspacemarines.rte"),
+		Death = CreateSoundContainer("VO Death Variant One", "ChaosSpaceMarines.rte"),
+		Spot = CreateSoundContainer("VO Spot Variant One", "ChaosSpaceMarines.rte"),
+		Shoot = CreateSoundContainer("VO Shoot Variant One", "ChaosSpaceMarines.rte"),
 	};
 
-	self.voiceSound = CreateSoundContainer("VO Pain chaosspacemarines", "chaosspacemarines.rte")
+	self.voiceSound = CreateSoundContainer("VO Pain chaosspacemarines", "ChaosSpaceMarines.rte")
 	-- MEANINGLESS! this is just so we can do voiceSound.Pos without an if check first! it will be overwritten first actual VO play
 
 	self.healDelayTimer = Timer()

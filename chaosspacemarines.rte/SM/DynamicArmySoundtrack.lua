@@ -18,7 +18,7 @@ function DynamicArmySoundtrackC:UpdateScript()
         end
     else
         if not self.playmusic then
-                AudioMan:PlayMusic("chaosspacemarines.rte/SM/OHGODd.ogg",0,-1)
+                AudioMan:PlayMusic("ChaosSpaceMarines.rte/SM/OHGODd.ogg",0,-1)
             self.playmusic = true
         end
     end

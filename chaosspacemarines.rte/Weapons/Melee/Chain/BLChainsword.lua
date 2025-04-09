@@ -29,7 +29,7 @@ function Update(self)
 
 					vect = vect:RadRotate(self.RotAngle)
 
-					local chaincut = CreateMOPixel("Particle CCChainsword Hit", "chaosspacemarines.rte")
+					local chaincut = CreateMOPixel("Particle CCChainsword Hit", "ChaosSpaceMarines.rte")
 					chaincut.Vel = vect
 					chaincut.Team = self.Team
 					chaincut.Pos = self.MuzzlePos
@@ -42,7 +42,7 @@ function Update(self)
 
 					vect = vect:RadRotate(self.RotAngle)
 
-					local chaincut = CreateMOPixel("Particle CCChainsword Hit", "chaosspacemarines.rte")
+					local chaincut = CreateMOPixel("Particle CCChainsword Hit", "ChaosSpaceMarines.rte")
 					chaincut.Vel = vect
 					chaincut.Team = self.Team
 					chaincut.Pos = self.MuzzlePos

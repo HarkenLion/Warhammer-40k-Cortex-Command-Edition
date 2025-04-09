@@ -1,4 +1,4 @@
-dofile("imperialguard.rte/Fx/TableVectorLibrary.lua");
+dofile("ImperialGuard.rte/Fx/TableVectorLibrary.lua");
 
 local Rad = math.rad;
 local Max = math.max;

@@ -12,9 +12,9 @@ function Create(self)
 	self.critsMax = 2 -- max amount of critical hits per swing
 
 	self.speed = 0.5 -- variable(not)
-	self.equipSound = CreateSoundContainer("Powersword Equip", "imperialguard.rte")
-	self.swingSound = CreateSoundContainer("Powersword Swing", "imperialguard.rte")
-	self.bounceSound = CreateSoundContainer("Powersword Bounce", "imperialguard.rte")
+	self.equipSound = CreateSoundContainer("Powersword Equip", "ImperialGuard.rte")
+	self.swingSound = CreateSoundContainer("Powersword Swing", "ImperialGuard.rte")
+	self.bounceSound = CreateSoundContainer("Powersword Bounce", "ImperialGuard.rte")
 	self.swingTimer = Timer()
 end
 

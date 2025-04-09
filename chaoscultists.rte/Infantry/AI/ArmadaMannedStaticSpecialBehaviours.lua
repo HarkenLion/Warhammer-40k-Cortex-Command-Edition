@@ -2,17 +2,17 @@ ArmadaMannedStaticSpecialBehaviours = {}
 
 function ArmadaMannedStaticSpecialBehaviours.manTheGuns(self)
 	if self.gotGunner == false then
-		local gunner = CreateAHuman("Traitor Guardsman", "chaoscultists.rte")
+		local gunner = CreateAHuman("Traitor Guardsman", "ChaosCultists.rte")
 		gunner.Pos = self.Pos
 		gunner.Team = self.Team
 		gunner.Vel = self.Vel
 		gunner.AIMode = Actor.AIMODE_SENTRY
 		gunner:AddScript("Base.rte/Scripts/Shared/NoCasualty.lua")
 
-		local sidearm = RandomHDFirearm("Weapons - Secondary", "chaoscultists.rte")
+		local sidearm = RandomHDFirearm("Weapons - Secondary", "ChaosCultists.rte")
 		local mainarm = nil
 		if math.random() < 0.35 then
-			mainarm = RandomHDFirearm("Weapons - Light", "chaoscultists.rte")
+			mainarm = RandomHDFirearm("Weapons - Light", "ChaosCultists.rte")
 		end
 
 		gunner:AddInventoryItem(sidearm)
@@ -28,17 +28,17 @@ function ArmadaMannedStaticSpecialBehaviours.manTheGuns(self)
 	if self.crewSpawnTimer:IsPastSimMS(self.crewReloaderDelay) then
 		if self.crewSize > 1 and math.random() <= self.reloaderChance then
 			if self.gotReloader == false then
-				local reloader = CreateAHuman("Traitor Guardsman", "chaoscultists.rte")
+				local reloader = CreateAHuman("Traitor Guardsman", "ChaosCultists.rte")
 				reloader.Pos = self.Pos
 				reloader.Team = self.Team
 				reloader.Vel = self.Vel
 				reloader.AIMode = Actor.AIMODE_SENTRY
 				reloader:AddScript("Base.rte/Scripts/Shared/NoCasualty.lua")
 
-				local sidearm = RandomHDFirearm("Weapons - Secondary", "chaoscultists.rte")
+				local sidearm = RandomHDFirearm("Weapons - Secondary", "ChaosCultists.rte")
 				local mainarm = nil
 				if math.random() < 0.35 then
-					mainarm = RandomHDFirearm("Weapons - Light", "chaoscultists.rte")
+					mainarm = RandomHDFirearm("Weapons - Light", "ChaosCultists.rte")
 				end
 
 				reloader:AddInventoryItem(sidearm)
@@ -58,17 +58,17 @@ function ArmadaMannedStaticSpecialBehaviours.manTheGuns(self)
 	if self.crewSpawnTimer:IsPastSimMS(self.crewSpotterDelay) then
 		if self.crewSize > 2 and math.random() <= self.spotterChance then
 			if self.gotSpotter == false then
-				local spotter = CreateAHuman("Traitor Guard Heavy Gunner", "chaoscultists.rte")
+				local spotter = CreateAHuman("Traitor Guard Heavy Gunner", "ChaosCultists.rte")
 				spotter.Pos = self.Pos
 				spotter.Team = self.Team
 				spotter.Vel = self.Vel
 				spotter.AIMode = Actor.AIMODE_SENTRY
 				spotter:AddScript("Base.rte/Scripts/Shared/NoCasualty.lua")
 
-				local sidearm = RandomHDFirearm("Weapons - Secondary", "chaoscultists.rte")
+				local sidearm = RandomHDFirearm("Weapons - Secondary", "ChaosCultists.rte")
 				local mainarm = nil
 				if math.random() < 0.35 then
-					mainarm = RandomHDFirearm("Weapons - Light", "chaoscultists.rte")
+					mainarm = RandomHDFirearm("Weapons - Light", "ChaosCultists.rte")
 				end
 
 				spotter:AddInventoryItem(sidearm)

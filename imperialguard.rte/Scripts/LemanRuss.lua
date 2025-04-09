@@ -4,8 +4,8 @@ require("AI/NativeCrabAI") --dofile("Base.rte/AI/NativeCrabAI.lua")
 function Create(self)
 	self.c = self:GetController()
 	self.setalt = 7
-	self.moveSound = CreateSoundContainer("Tank Move", "imperialguard.rte")
-	self.idleSound = CreateSoundContainer("Tank Idle", "imperialguard.rte")
+	self.moveSound = CreateSoundContainer("Tank Move", "ImperialGuard.rte")
+	self.idleSound = CreateSoundContainer("Tank Idle", "ImperialGuard.rte")
 
 	for attachable in self.Attachables do
 		if attachable.PresetName == "Leman Russ Tank Tread" then

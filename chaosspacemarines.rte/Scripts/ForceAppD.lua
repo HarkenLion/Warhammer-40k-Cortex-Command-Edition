@@ -1,5 +1,5 @@
 dofile("Base.rte/Constants.lua")
-dofile("chaosspacemarines.rte/Scripts/AI/NativeBroadsideAI.lua")
+dofile("ChaosSpaceMarines.rte/Scripts/AI/NativeBroadsideAI.lua")
 require("AI/NativeHumanAI") --dofile("Base.rte/AI/NativeHumanAI.lua")
 
 function Create(self)
@@ -357,7 +357,7 @@ function Update(self)
 
 		self.alt = self:GetAltitude(0, 1)
 		if self.alt < 18 then
-			local decompress = CreateAEmitter("Bolter Casing", "chaosspacemarines.rte")
+			local decompress = CreateAEmitter("Bolter Casing", "ChaosSpaceMarines.rte")
 			decompress.Pos = self.Pos
 			decompress.Vel = self.Vel
 
@@ -382,7 +382,7 @@ end
 function Destroy(self)
 	if MovableMan:IsActor(self) == true then
 		self.AngularVel = 0
-		local decompress = CreateAEmitter("Bolter Casing", "chaosspacemarines.rte")
+		local decompress = CreateAEmitter("Bolter Casing", "ChaosSpaceMarines.rte")
 		decompress.Pos = self.Pos
 		decompress.Vel = self.Vel
 

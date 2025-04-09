@@ -36,10 +36,10 @@ function Create(self)
 
 	---------------- AI variables end ----------------
 
-	self.Turret1 = CreateACrab("Valkyrie Laser Turret", "deathkorps.rte")
+	self.Turret1 = CreateACrab("Valkyrie Laser Turret", "DeathKorps.rte")
 	MovableMan:AddActor(self.Turret1)
 	self.Turret1.Offset = Vector(-37, 10)
-	self.Turret2 = CreateACrab("Valkyrie Laser Turret", "deathkorps.rte")
+	self.Turret2 = CreateACrab("Valkyrie Laser Turret", "DeathKorps.rte")
 	MovableMan:AddActor(self.Turret2)
 	self.Turret2.Offset = Vector(37, 10)
 	self.Turret1.Team = self.Team

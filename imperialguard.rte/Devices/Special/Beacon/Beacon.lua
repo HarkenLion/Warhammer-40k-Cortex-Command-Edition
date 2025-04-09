@@ -114,7 +114,7 @@ function ArtilleryLight(self)
 		self.BombardTimer2:Reset()
 		self.Bomb.Team = self.Team
 		self.Bomb2.Team = self.Team
-		AudioMan:PlayMusic("imperialguard.rte/12191.flac", 0.1,-10);
+		AudioMan:PlayMusic("ImperialGuard.rte/12191.flac", 0.1,-10);
 
 		self.artilleryTimer:Reset()
 		self.salvoTimer:Reset()

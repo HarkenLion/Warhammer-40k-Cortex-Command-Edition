@@ -16,7 +16,7 @@ function Create(self)
 	end
 
 	self.GetsHitByMOs = false
-	self.ejectSound = CreateSoundContainer("Tank Eject", "deathkorps.rte")
+	self.ejectSound = CreateSoundContainer("Tank Eject", "DeathKorps.rte")
 end
 
 function OnFire(self)
@@ -61,7 +61,7 @@ function Update(self)
 
 			if self.shellejected == false and self.fireTimer:IsPastSimMS(650) then
 				if self.operator then
-					local cannoncasing = CreateMOSRotating("Cannon Casing", "deathkorps.rte")
+					local cannoncasing = CreateMOSRotating("Cannon Casing", "DeathKorps.rte")
 					cannoncasing.Pos = self.operator.Pos
 						+ Vector(-5 * self.operator.FlipFactor, -45):RadRotate(self.operator.RotAngle)
 					cannoncasing.Team = self.Team

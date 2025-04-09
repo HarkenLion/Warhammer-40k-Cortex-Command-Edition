@@ -19,7 +19,7 @@ function Create(self)
 		"Flesh Scraps",
 	}
 	self.collectSound = CreateSoundContainer("Device Switch", "Base.rte")
-	self.hitSound = CreateSoundContainer("IG Shovel Hit", "deathkorps.rte")
+	self.hitSound = CreateSoundContainer("IG Shovel Hit", "DeathKorps.rte")
 	--How much the shovel tilts when firing
 	self.angleSize = 1.0
 
@@ -39,9 +39,9 @@ function Create(self)
 	self.critsMax = 2 -- max amount of critical hits per swing
 
 	self.speed = 0.5 -- variable(not)
-	self.equipSound = CreateSoundContainer("CombatAxe Equip", "deathkorps.rte")
-	self.swingSound = CreateSoundContainer("CombatAxe Swing", "deathkorps.rte")
-	self.bounceSound = CreateSoundContainer("CombatAxe Bounce", "deathkorps.rte")
+	self.equipSound = CreateSoundContainer("CombatAxe Equip", "DeathKorps.rte")
+	self.swingSound = CreateSoundContainer("CombatAxe Swing", "DeathKorps.rte")
+	self.bounceSound = CreateSoundContainer("CombatAxe Bounce", "DeathKorps.rte")
 	self.swingTimer = Timer()
 end
 
@@ -264,7 +264,7 @@ function Update(self)
 		-- 	local fireVec = Vector((50 + 10 * offsetMultiplier) * self.FlipFactor, 0):RadRotate(self.RotAngle + 0.2 * self.FlipFactor);
 		-- 	for i = 1, particleCount do
 		-- 		--Lua-generated particles that can chip stone
-		-- 		local dig = CreateMOPixel("Particle IG Shovel 2", "deathkorps.rte");
+		-- 		local dig = CreateMOPixel("Particle IG Shovel 2", "DeathKorps.rte");
 		-- 		dig.Pos = self.Pos;
 		-- 		dig.Vel = Vector(math.random(50, 60) * self.FlipFactor, 0):RadRotate(self.RotAngle + (-0.4 + i * 0.2) * self.FlipFactor);
 		-- 		MovableMan:AddParticle(dig);

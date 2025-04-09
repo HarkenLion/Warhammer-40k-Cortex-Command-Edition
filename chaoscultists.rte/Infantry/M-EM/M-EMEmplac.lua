@@ -99,7 +99,7 @@ function Update(self)
 					self.gunner = ToAHuman(self.reloader)
 					self.reloader = nil
 					self.parent.PlayerControllable = true
-					self.gunner:AddInventoryItem(CreateHDFirearm("Gunner Holder", "chaoscultists.rte"))
+					self.gunner:AddInventoryItem(CreateHDFirearm("Gunner Holder", "ChaosCultists.rte"))
 					self.gunner:EquipNamedDevice("Gunner Holder", true)
 					self.gunner:RemoveInventoryItem("Reloader Holder")
 				elseif self.optimizationTimer:IsPastSimMS(self.optimizationDelay) then
@@ -142,7 +142,7 @@ function Update(self)
 												)
 											then
 												self.gunner:AddInventoryItem(
-													CreateHDFirearm("Gunner Holder", "chaoscultists.rte")
+													CreateHDFirearm("Gunner Holder", "ChaosCultists.rte")
 												)
 												self.gunner:EquipNamedDevice("Gunner Holder", true)
 												self.gunner.AIMode = Actor.AIMODE_NONE
@@ -285,7 +285,7 @@ function Update(self)
 													then
 														local RH = CreateHDFirearm(
 															"Reloader Holder",
-															"chaoscultists.rte"
+															"ChaosCultists.rte"
 														)
 														RH.Frame = 1
 														self.reloader:AddInventoryItem(RH)
@@ -378,7 +378,7 @@ function Update(self)
 			local gunnerFrame = (math.abs(self.parent.AngularVel) > 7 or math.abs(self.parent.RotAngle) > 0.8) and 5
 				or self.gunner and (self.parent.Team + 1)
 				or 0
-			local gunnerIcon = CreateMOSRotating("Gunner HUD Icon", "chaoscultists.rte")
+			local gunnerIcon = CreateMOSRotating("Gunner HUD Icon", "ChaosCultists.rte")
 			local gunnerIconPos = self.crewSize > 1 and self.parent.Pos + Vector(-6, -32)
 				or self.parent.Pos + Vector(0, -32)
 
@@ -389,7 +389,7 @@ function Update(self)
 						and 5
 					or self.reloader and (self.parent.Team + 1)
 					or 0
-				local reloaderIcon = CreateMOSRotating("Reloader HUD Icon", "chaoscultists.rte")
+				local reloaderIcon = CreateMOSRotating("Reloader HUD Icon", "ChaosCultists.rte")
 				local reloaderIconPos = self.parent.Pos + Vector(6, -32)
 
 				PrimitiveMan:DrawBitmapPrimitive(screen, reloaderIconPos, reloaderIcon, 3.14, reloaderFrame, true, true)
@@ -409,7 +409,7 @@ function Update(self)
 
 					local radialIcon = CreateMOSRotating(
 						"Armada GUI Radial" .. teamTable[self.parent.Team + 1],
-						"chaoscultists.rte"
+						"ChaosCultists.rte"
 					)
 
 					PrimitiveMan:DrawBitmapPrimitive(screen, grabber.Pos, radialIcon, 3.14, guiFrame, true, true)
@@ -430,7 +430,7 @@ function Update(self)
 				end
 
 				if self.dismountTimer:IsPastSimMS(self.dismountDelay) then
-					local turretItem = CreateHDFirearm("M-EM Gun Bag", "chaoscultists.rte") --Create turret deployer
+					local turretItem = CreateHDFirearm("M-EM Gun Bag", "ChaosCultists.rte") --Create turret deployer
 
 					self.grabber:AddInventoryItem(turretItem)
 					self.grabber:EquipNamedDevice("M-EM Gun Bag", true)

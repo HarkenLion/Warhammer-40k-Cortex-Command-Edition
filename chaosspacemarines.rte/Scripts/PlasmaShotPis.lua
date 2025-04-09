@@ -22,13 +22,13 @@ function Update(self)
 		i = i + 1
 	end
 	if self.ToDelete == true then
-		local e = CreateMOSParticle("Plasma Burst A", "chaosspacemarines.rte")
+		local e = CreateMOSParticle("Plasma Burst A", "ChaosSpaceMarines.rte")
 		local rand = math.random(-4, 4)
 		if rand > 2 then
-			e = CreateMOSParticle("Plasma Burst B", "chaosspacemarines.rte")
+			e = CreateMOSParticle("Plasma Burst B", "ChaosSpaceMarines.rte")
 		end
 		if rand < -2 then
-			e = CreateMOSParticle("Plasma Burst C", "chaosspacemarines.rte")
+			e = CreateMOSParticle("Plasma Burst C", "ChaosSpaceMarines.rte")
 		end
 		e.Pos = self.Pos + checkVect
 		e.Scale = 0.5

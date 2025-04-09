@@ -29,7 +29,7 @@ function Update(self)
 		local velFactor = GetPPM() * TimerMan.DeltaTimeSecs
 		local checkVect = self.Vel * velFactor
 
-		local e = CreateAEmitter("Bolter Primaris Shot", "chaosspacemarines.rte") --CreateMOSParticle("Small Smoke Ball 1");
+		local e = CreateAEmitter("Bolter Primaris Shot", "ChaosSpaceMarines.rte") --CreateMOSParticle("Small Smoke Ball 1");
 		e.Pos = self.Pos + (checkVect * 0.6)
 		e.Team = self.Team
 		MovableMan:AddMO(e)

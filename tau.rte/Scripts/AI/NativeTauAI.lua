@@ -1,4 +1,4 @@
-dofile("tau.rte/Scripts/AI/TauBehaviors.lua")
+dofile("Tau.rte/Scripts/AI/TauBehaviors.lua")
 require("AI/PID")
 
 NativeTauAI = {}

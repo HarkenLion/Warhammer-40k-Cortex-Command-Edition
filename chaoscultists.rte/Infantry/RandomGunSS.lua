@@ -2,11 +2,11 @@ function Create(self)
     local rand = math.random() * 3
     local gun
     if rand < 1 then
-        gun = CreateHDFirearm("chaoscultists.rte/Lasrifle Scab Shooter");
+        gun = CreateHDFirearm("ChaosCultists.rte/Lasrifle Scab Shooter");
     elseif rand < 2 then
-        gun = CreateHDFirearm("chaoscultists.rte/Graia MK IV Autogun");
+        gun = CreateHDFirearm("ChaosCultists.rte/Graia MK IV Autogun");
     else
-        gun = CreateHDFirearm("chaoscultists.rte/Vraks MK VII Autogun");
+        gun = CreateHDFirearm("ChaosCultists.rte/Vraks MK VII Autogun");
     end
     self:AddInventoryItem(gun)
 end

@@ -7,9 +7,9 @@ function Create(self)
 	self.chargeup = false
 	self.startcharge = true
 	self.chargenum = 0
-	self.fireSound = CreateSoundContainer("Lasgun Fire", "deathkorps.rte")
-	self.fireSoundBig = CreateSoundContainer("Lasgun Big Fire", "deathkorps.rte")
-	self.chargeSound = CreateSoundContainer("Lasgun Charge", "deathkorps.rte")
+	self.fireSound = CreateSoundContainer("Lasgun Fire", "DeathKorps.rte")
+	self.fireSoundBig = CreateSoundContainer("Lasgun Big Fire", "DeathKorps.rte")
+	self.chargeSound = CreateSoundContainer("Lasgun Charge", "DeathKorps.rte")
 
 	function self.DischargeGun()
 		self.fireSound:Play(self.Pos)
@@ -20,7 +20,7 @@ function Create(self)
 			self.firetimer:Reset()
 		end
 
-		local sfx = CreateAEmitter("Las Muzzle Flash", "deathkorps.rte")
+		local sfx = CreateAEmitter("Las Muzzle Flash", "DeathKorps.rte")
 		sfx.Pos = self.MuzzlePos
 		if self.HFlipped then
 			sfx.RotAngle = self.RotAngle + math.pi
@@ -33,7 +33,7 @@ function Create(self)
 
 		if self.chargenum > 1 then
 			local framenum = math.random(1, 5)
-			local effectPar = CreateMOSParticle("Lasgun Discharge " .. framenum, "deathkorps.rte")
+			local effectPar = CreateMOSParticle("Lasgun Discharge " .. framenum, "DeathKorps.rte")
 			effectPar.Pos = self.MuzzlePos
 			effectPar.RotAngle = sfx.RotAngle
 			effectPar.Scale = self.chargenum * 0.125
@@ -62,7 +62,7 @@ function Create(self)
 			local angle = Range.AbsRadAngle
 
 			for i = 0, 1 + self.chargenum do
-				local pulseexplosion = CreateMOPixel("Rifle Las Particle Light Hit", "deathkorps.rte")
+				local pulseexplosion = CreateMOPixel("Rifle Las Particle Light Hit", "DeathKorps.rte")
 				pulseexplosion.Pos = hitpos
 				pulseexplosion.Team = self.Team
 				pulseexplosion.Vel = Vector(115, 0):RadRotate(angle)

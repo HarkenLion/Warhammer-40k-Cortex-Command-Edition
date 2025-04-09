@@ -6,8 +6,8 @@ function Create(self)
 	self.c = self:GetController()
 	self.setalt = 7 --5; --75; --58;
 
-	self.moveSound = CreateSoundContainer("Tank Move", "chaosspacemarines.rte")
-	self.idleSound = CreateSoundContainer("Tank Idle", "chaosspacemarines.rte")
+	self.moveSound = CreateSoundContainer("Tank Move", "ChaosSpaceMarines.rte")
+	self.idleSound = CreateSoundContainer("Tank Idle", "ChaosSpaceMarines.rte")
 
 	for attachable in self.Attachables do
 		if

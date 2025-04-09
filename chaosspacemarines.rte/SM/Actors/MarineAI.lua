@@ -13,9 +13,9 @@ function Create(self)
 	self.baseRTE = "spacemarines.rte"
 	
 	self.voiceSounds = {
-		Death = CreateSoundContainer("VO Death Variant One", "chaosspacemarines.rte"),
-		Spot = CreateSoundContainer("VO Spot Variant One", "chaosspacemarines.rte"),
-		Shoot = CreateSoundContainer("VO Shoot Variant One", "chaosspacemarines.rte"),
+		Death = CreateSoundContainer("VO Death Variant One", "ChaosSpaceMarines.rte"),
+		Spot = CreateSoundContainer("VO Spot Variant One", "ChaosSpaceMarines.rte"),
+		Shoot = CreateSoundContainer("VO Shoot Variant One", "ChaosSpaceMarines.rte"),
 	};
 
 	self.voiceSound = CreateSoundContainer("VO Pain spacemarines", "spacemarines.rte")

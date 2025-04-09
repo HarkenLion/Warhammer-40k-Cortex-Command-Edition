@@ -55,7 +55,7 @@ function Update(self)
 							local getact = ToActor(actor)
 							--
 							--local uang = findang*getact.FlipFactor
-							local sfx = CreateMOSRotating("Target Control Node", "deathkorps.rte")
+							local sfx = CreateMOSRotating("Target Control Node", "DeathKorps.rte")
 							--getact:SetNumberValue("ArtilleryRequested",1)
 							sfx.Pos = getact.Pos
 							--sfx:SetStringValue("FindTarg",getact.PresetName)
@@ -66,7 +66,7 @@ function Update(self)
 							sfx.IgnoresTeamHits = true
 							MovableMan:AddParticle(sfx)
 
-							local targetmarker = CreateMOPixel("Artillery Designator", "deathkorps.rte")
+							local targetmarker = CreateMOPixel("Artillery Designator", "DeathKorps.rte")
 							targetmarker.Pos = hitvect
 							targetmarker.Team = self.Team
 							MovableMan:AddParticle(targetmarker)

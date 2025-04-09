@@ -15,19 +15,19 @@ function Update(self)
 	local checkVect = self.Vel * velFactor
 	local i = 0
 	while i < 3 do
-		local e = CreateMOPixel("Melta Shot Glow A", "chaosspacemarines.rte")
+		local e = CreateMOPixel("Melta Shot Glow A", "ChaosSpaceMarines.rte")
 		local rand = math.random(-4, 4)
 		if rand > 3 then
-			e = CreateMOPixel("Melta Shot Glow B", "chaosspacemarines.rte")
+			e = CreateMOPixel("Melta Shot Glow B", "ChaosSpaceMarines.rte")
 		end
 		if rand > 2 then
-			e = CreateMOPixel("Melta Shot Glow C", "chaosspacemarines.rte")
+			e = CreateMOPixel("Melta Shot Glow C", "ChaosSpaceMarines.rte")
 		end
 		if rand < -2 then
-			e = CreateMOPixel("Melta Shot Glow D", "chaosspacemarines.rte")
+			e = CreateMOPixel("Melta Shot Glow D", "ChaosSpaceMarines.rte")
 		end
 		if rand < -3 then
-			e = CreateMOPixel("Melta Shot Glow E", "chaosspacemarines.rte")
+			e = CreateMOPixel("Melta Shot Glow E", "ChaosSpaceMarines.rte")
 		end
 		e.Vel = self.Vel
 		e.Pos = self.Pos - (checkVect * 0.25 * i)
@@ -36,13 +36,13 @@ function Update(self)
 		i = i + 1
 	end
 	if self.ToDelete == true then
-		local e = CreateMOSParticle("Melta Burst A", "chaosspacemarines.rte")
+		local e = CreateMOSParticle("Melta Burst A", "ChaosSpaceMarines.rte")
 		local rand = math.random(-4, 4)
 		if rand > 2 then
-			e = CreateMOSParticle("Melta Burst B", "chaosspacemarines.rte")
+			e = CreateMOSParticle("Melta Burst B", "ChaosSpaceMarines.rte")
 		end
 		if rand < -2 then
-			e = CreateMOSParticle("Melta Burst C", "chaosspacemarines.rte")
+			e = CreateMOSParticle("Melta Burst C", "ChaosSpaceMarines.rte")
 		end
 		e.Pos = self.Pos + checkVect
 		e.Frame = math.random(0, 4)

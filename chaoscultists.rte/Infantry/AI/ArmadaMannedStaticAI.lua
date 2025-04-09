@@ -1,5 +1,5 @@
 dofile("Base.rte/Constants.lua")
-package.path = package.path .. ";chaoscultists.rte/?.lua"
+package.path = package.path .. ";ChaosCultists.rte/?.lua"
 require("Infantry/AI/NativeArmadaTurretAI")
 require("Infantry/AI/ArmadaMannedStaticSpecialBehaviours")
 

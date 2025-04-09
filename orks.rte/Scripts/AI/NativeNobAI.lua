@@ -1,4 +1,4 @@
-dofile("orks.rte/Scripts/AI/OrkBehaviors.lua")
+dofile("Orks.rte/Scripts/AI/OrkBehaviors.lua")
 require("AI/PID")
 
 NativeNobAI = {}

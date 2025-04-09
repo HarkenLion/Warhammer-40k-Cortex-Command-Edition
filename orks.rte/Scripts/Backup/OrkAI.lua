@@ -1,5 +1,5 @@
 dofile("Base.rte/Constants.lua")
-dofile("orks.rte/Scripts/AI/NativeOrkAI.lua")
+dofile("Orks.rte/Scripts/AI/NativeOrkAI.lua")
 
 function Create(self)
 	self.AI = NativeOrkAI:Create(self)

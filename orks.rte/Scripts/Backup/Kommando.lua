@@ -1,5 +1,5 @@
 dofile("Base.rte/Constants.lua")
-dofile("orks.rte/Scripts/AI/NativeNobAI.lua")
+dofile("Orks.rte/Scripts/AI/NativeNobAI.lua")
 
 function Create(self)
 	self.RearmTimer = Timer()

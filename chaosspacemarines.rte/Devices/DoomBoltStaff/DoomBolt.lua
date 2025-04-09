@@ -79,7 +79,7 @@ function Update(self)
 	local trailLength = 10;
 	local setVel = Vector(self.Vel.X, self.Vel.Y):SetMagnitude(math.sqrt(self.Vel.Magnitude));
 	for i = 1, trailLength do
-		local effect = CreateMOSParticle("Black Smoke Trail " .. math.random(3), "chaosspacemarines.rte");
+		local effect = CreateMOSParticle("Black Smoke Trail " .. math.random(3), "ChaosSpaceMarines.rte");
 		effect.Pos = self.Pos - (offset * i/trailLength) + (offset.Normalized * RangeRand(-1, 0) + offset.Normalized.Perpendicular * RangeRand(-1, 1)) * var.smokeTrailRadius;
 		effect.Vel = setVel * RangeRand(0.6, 1) + Vector(RangeRand(-1, 1), RangeRand(-1, 1)) * var.smokeTrailRadius * 3;
 		effect.Lifetime = math.max(var.smokeTrailLifeTime * RangeRand(0.4, 1) * (self.Lifetime > 1 and 1 - self.Age/self.Lifetime or 1), 1);

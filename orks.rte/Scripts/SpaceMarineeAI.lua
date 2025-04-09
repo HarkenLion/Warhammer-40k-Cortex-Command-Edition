@@ -1,7 +1,7 @@
 
 dofile("Base.rte/Constants.lua")
 require("AI/NativeHumanAI")  --dofile("Base.rte/AI/NativeHumanAI.lua")
-package.path = package.path .. ";Mods/orks.rte/?.lua";
+package.path = package.path .. ";Mods/Orks.rte/?.lua";
 require("Scripts/MarineAIBehaviourss")
 
 function Create(self)
@@ -10,26 +10,26 @@ function Create(self)
 	
 	-- Start modded code --
 	
-	self.RTE = "orks.rte";
-	self.baseRTE = "orks.rte";
+	self.RTE = "Orks.rte";
+	self.baseRTE = "Orks.rte";
 
 	if math.random(0, 1) == 0 then
 		self.voiceSounds = {
-		Death = CreateSoundContainer("VOORKS Death VariantOne", "orks.rte"),
-		Spot = CreateSoundContainer("VOORKS Spot VariantOne", "orks.rte"),
-		suppressedLow = CreateSoundContainer("VOORKS Suppressed Ork", "orks.rte"),
-		suppressedMedium = CreateSoundContainer("VOORKS Suppressed OrkM", "orks.rte"),
-		suppressedHigh = CreateSoundContainer("VOORKS Suppressed OrkH", "orks.rte"),};
+		Death = CreateSoundContainer("VOORKS Death VariantOne", "Orks.rte"),
+		Spot = CreateSoundContainer("VOORKS Spot VariantOne", "Orks.rte"),
+		suppressedLow = CreateSoundContainer("VOORKS Suppressed Ork", "Orks.rte"),
+		suppressedMedium = CreateSoundContainer("VOORKS Suppressed OrkM", "Orks.rte"),
+		suppressedHigh = CreateSoundContainer("VOORKS Suppressed OrkH", "Orks.rte"),};
 	else
 		self.voiceSounds = {
-		Death = CreateSoundContainer("VOORKS Death VariantOne", "orks.rte"),
-		Spot = CreateSoundContainer("VOORKS Spot VariantOnee", "orks.rte"),
-		suppressedLow = CreateSoundContainer("VOORKS Suppressed Ork", "orks.rte"),
-		suppressedMedium = CreateSoundContainer("VOORKS Suppressed OrkM", "orks.rte"),
-		suppressedHigh = CreateSoundContainer("VOORKS Suppressed OrkH", "orks.rte"),};
+		Death = CreateSoundContainer("VOORKS Death VariantOne", "Orks.rte"),
+		Spot = CreateSoundContainer("VOORKS Spot VariantOnee", "Orks.rte"),
+		suppressedLow = CreateSoundContainer("VOORKS Suppressed Ork", "Orks.rte"),
+		suppressedMedium = CreateSoundContainer("VOORKS Suppressed OrkM", "Orks.rte"),
+		suppressedHigh = CreateSoundContainer("VOORKS Suppressed OrkH", "Orks.rte"),};
 	end
 	
-	self.voiceSound = CreateSoundContainer("VOORKS PAIN", "orks.rte");
+	self.voiceSound = CreateSoundContainer("VOORKS PAIN", "Orks.rte");
 	-- MEANINGLESS! this is just so we can do voiceSound.Pos without an if check first! it will be overwritten first actual VO play
 
 	self.healDelayTimer = Timer();

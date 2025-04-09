@@ -194,7 +194,7 @@ function Create(self)
 	-- Hit GFX
 	if hit then
 		if math.random(0, 6) == 0 then
-			self.explosion = CreateAEmitter("Warp Strike Effect", "chaosspacemarines.rte")
+			self.explosion = CreateAEmitter("Warp Strike Effect", "ChaosSpaceMarines.rte")
 			self.explosion.Pos = hitPos
 			self.explosion.RotAngle = self.RotAngle
 			self.explosion.Team = self.Team

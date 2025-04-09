@@ -12,9 +12,9 @@ function Create(self)
 	self.critsMax = 2 -- max amount of critical hits per swing
 
 	self.speed = 0.5 -- variable(not)
-	self.equipSound = CreateSoundContainer("CombatAxe Equip", "deathkorps.rte")
-	self.swingSound = CreateSoundContainer("CombatAxe Swing", "deathkorps.rte")
-	self.bounceSound = CreateSoundContainer("CombatAxe Bounce", "deathkorps.rte")
+	self.equipSound = CreateSoundContainer("CombatAxe Equip", "DeathKorps.rte")
+	self.swingSound = CreateSoundContainer("CombatAxe Swing", "DeathKorps.rte")
+	self.bounceSound = CreateSoundContainer("CombatAxe Bounce", "DeathKorps.rte")
 	self.swingTimer = Timer()
 end
 

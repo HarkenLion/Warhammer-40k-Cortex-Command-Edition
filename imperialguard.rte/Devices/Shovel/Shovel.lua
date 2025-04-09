@@ -19,7 +19,7 @@ function Create(self)
 		"Flesh Scraps",
 	}
 	self.collectSound = CreateSoundContainer("Device Switch", "Base.rte")
-	self.hitSound = CreateSoundContainer("IG Shovel Hit", "imperialguard.rte")
+	self.hitSound = CreateSoundContainer("IG Shovel Hit", "ImperialGuard.rte")
 	--How much the shovel tilts when firing
 	self.angleSize = 1.0
 
@@ -75,7 +75,7 @@ function Update(self)
 			)
 			for i = 1, particleCount do
 				--Lua-generated particles that can chip stone
-				local dig = CreateMOPixel("Particle IG Shovel 2", "imperialguard.rte")
+				local dig = CreateMOPixel("Particle IG Shovel 2", "ImperialGuard.rte")
 				dig.Pos = self.Pos
 				dig.Vel = Vector(math.random(50, 60) * self.FlipFactor, 0):RadRotate(
 					self.RotAngle + (-0.4 + i * 0.2) * self.FlipFactor

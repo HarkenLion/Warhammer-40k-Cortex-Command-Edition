@@ -1,7 +1,7 @@
 
 dofile("Base.rte/Constants.lua")
 require("AI/NativeHumanAI")  --dofile("Base.rte/AI/NativeHumanAI.lua")
-package.path = package.path .. ";Mods/imperialguard.rte/?.lua";
+package.path = package.path .. ";Mods/ImperialGuard.rte/?.lua";
 require("MarineAIBehaviourss")
 
 function Create(self)
@@ -10,26 +10,26 @@ function Create(self)
 	
 	-- Start modded code --
 	
-	self.RTE = "imperialguard.rte";
-	self.baseRTE = "imperialguard.rte";
+	self.RTE = "ImperialGuard.rte";
+	self.baseRTE = "ImperialGuard.rte";
 
 	if math.random(0, 1) == 0 then
 		self.voiceSounds = {
-		Death = CreateSoundContainer("VOimperialguard Death VariantOne", "imperialguard.rte"),
-		Spot = CreateSoundContainer("VOimperialguard Spot VariantOne", "imperialguard.rte"),
-		suppressedLow = CreateSoundContainer("VOimperialguard Suppressed imperialguard", "imperialguard.rte"),
-		suppressedMedium = CreateSoundContainer("VOimperialguard Suppressed imperialguardM", "imperialguard.rte"),
-		suppressedHigh = CreateSoundContainer("VOimperialguard Suppressed imperialguardH", "imperialguard.rte"),};
+		Death = CreateSoundContainer("VOimperialguard Death VariantOne", "ImperialGuard.rte"),
+		Spot = CreateSoundContainer("VOimperialguard Spot VariantOne", "ImperialGuard.rte"),
+		suppressedLow = CreateSoundContainer("VOimperialguard Suppressed imperialguard", "ImperialGuard.rte"),
+		suppressedMedium = CreateSoundContainer("VOimperialguard Suppressed imperialguardM", "ImperialGuard.rte"),
+		suppressedHigh = CreateSoundContainer("VOimperialguard Suppressed imperialguardH", "ImperialGuard.rte"),};
 	else
 		self.voiceSounds = {
-		Death = CreateSoundContainer("VOimperialguard Death VariantOne", "imperialguard.rte"),
-		Spot = CreateSoundContainer("VOimperialguard Spot VariantOnee", "imperialguard.rte"),
-		suppressedLow = CreateSoundContainer("VOimperialguard Suppressed imperialguard", "imperialguard.rte"),
-		suppressedMedium = CreateSoundContainer("VOimperialguard Suppressed imperialguardM", "imperialguard.rte"),
-		suppressedHigh = CreateSoundContainer("VOimperialguard Suppressed imperialguardH", "imperialguard.rte"),};
+		Death = CreateSoundContainer("VOimperialguard Death VariantOne", "ImperialGuard.rte"),
+		Spot = CreateSoundContainer("VOimperialguard Spot VariantOnee", "ImperialGuard.rte"),
+		suppressedLow = CreateSoundContainer("VOimperialguard Suppressed imperialguard", "ImperialGuard.rte"),
+		suppressedMedium = CreateSoundContainer("VOimperialguard Suppressed imperialguardM", "ImperialGuard.rte"),
+		suppressedHigh = CreateSoundContainer("VOimperialguard Suppressed imperialguardH", "ImperialGuard.rte"),};
 	end
 	
-	self.voiceSound = CreateSoundContainer("VOimperialguard PAIN", "imperialguard.rte");
+	self.voiceSound = CreateSoundContainer("VOimperialguard PAIN", "ImperialGuard.rte");
 	-- MEANINGLESS! this is just so we can do voiceSound.Pos without an if check first! it will be overwritten first actual VO play
 
 	self.healDelayTimer = Timer();
