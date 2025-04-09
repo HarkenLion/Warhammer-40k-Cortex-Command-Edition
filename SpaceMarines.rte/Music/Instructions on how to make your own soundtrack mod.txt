@@ -1,0 +1,59 @@
+
+Credits, Zeta and Michale (me) for discovering and creating this expirement possible
+
+
+The first step is going to the Index.ini there you can see two important files, ModuleName = My awesome soundtrack (example) and Description = Random cool ass soundtrack (example) since it's 
+there so you can edit it to which soundtrack you want. Global script is just  the same since it contains Description = My cool ass soundtrack mod (example)
+
+The second step Songscript.lua located in global, self.SongSelect = math.random(number here) will chose an number between 1 to what ever number you set it to. Please follow the example seen below. Make sure you put the music track in music and its an .ogg file
+
+function SongScript:StartScript()
+	AudioMan:StopMusic()
+	self.SongSelect = nil
+	self.LastSong = nil
+end
+
+function SongScript:UpdateScript()
+if not AudioMan:IsMusicPlaying() then
+	self.SongSelect = math.random(8)
+
+	if self.SongSelect == 1 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC1.ogg",0,1)
+		self.LastSong = 1
+	--
+	elseif self.SongSelect == 2 and self.LastSong ~= 2 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC2.ogg",0,1)
+		self.LastSong = 2
+	--
+	elseif self.SongSelect == 3 and self.LastSong ~= 3 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC3.ogg",0,1)
+		self.LastSong = 3
+	--
+	elseif self.SongSelect == 4 and self.LastSong ~= 4 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC4.ogg",0,1)
+		self.LastSong = 4
+	--
+	elseif self.SongSelect == 5 and self.LastSong ~= 5 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC5.ogg",0,1)
+		self.LastSong = 5
+	--
+	elseif self.SongSelect == 6 and self.LastSong ~= 6 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC6.ogg",0,1)
+		self.LastSong = 6
+	--
+	elseif self.SongSelect == 7 and self.LastSong ~= 7 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC7.ogg",0,1)
+		self.LastSong = 7
+	--
+	elseif self.SongSelect == 8 and self.LastSong ~= 8 then
+		AudioMan:PlayMusic("Musicmodtemplete.rte/Music/CAC8.ogg",0,1)
+		self.LastSong = 8
+	elseif self.LastSong == 8 then
+	self.SongSelect = 1
+	end
+end
+end
+
+Limitations/bugs 
+
+After buildiing/base creating stage it seems to go back to the normal cortex command music, it also seems to not work during conquest battle state since its the same thing. 

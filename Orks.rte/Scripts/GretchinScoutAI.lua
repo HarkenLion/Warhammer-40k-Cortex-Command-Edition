@@ -1,0 +1,115 @@
+require("AI/NativeHumanAI")
+
+function Create(self)
+	self.AI = NativeHumanAI:Create(self)
+
+	self.mapwrapx = SceneMan.SceneWrapsX
+	self.activeCamo = false
+	self.CloakTimer = Timer()
+	self.WTime = Timer()
+end
+
+function Update(self)
+	--IF THE UNIT IS NOT DEAD...
+	if not (self:IsDead()) then
+		--IF ACTIVE CAMO IS ON, DO THESE THINGS
+		if self.activeCamo == true then
+			if self.WTime:IsPastSimMS(150) then
+				self.WTime:Reset()
+				--DETECTOR CHECK
+				--for actor in MovableMan.Actors do
+				for actor in MovableMan:GetMOsInRadius(self.Pos, 155, self.Team) do
+					if actor.ClassName == "Actor" then
+						--if actor.Team ~= self.Team then
+						local parvector = SceneMan:ShortestDistance(self.Pos, actor.Pos, self.mapwrapx)
+						--local pardist = parvector.Magnitude;
+						local percep = ToActor(actor).Perceptiveness
+
+						local shieldradius = 225
+						--if pardist < shieldradius * percep then
+						if parvector:MagnitudeIsLessThan(shieldradius * percep) then
+							self.CloakTimer:Reset()
+							self.change = true
+						end
+					end
+				end
+				--END DETECTOR CHECK
+			end
+
+			if self.Vel.Magnitude > 15 then
+				self.CloakTimer:Reset()
+				self.change = true
+			end
+
+			--SEE IF UNIT IS FIRING
+			if
+				self:GetController():IsState(Controller.WEAPON_FIRE)
+				or self:GetController():IsState(Controller.WEAPON_RELOAD)
+			then
+				self.CloakTimer:Reset()
+				self.change = true
+			end
+		end
+
+		--SYSTEM OF CHECKS TO INFORM INVISIBLITY SYSTEM WHETHER OR NOT IT SHOULD ACTIVATE
+		if not self.CloakTimer:IsPastSimMS(935) and self.Scale == 0 then
+			self.change = true
+			self.HUDVisible = true
+		end
+		if self.CloakTimer:IsPastSimMS(935) and not self.CloakTimer:IsPastSimMS(1175) then
+			self.change = true
+		end
+		if self.CloakTimer:IsPastSimMS(1175) and self.activeCamo == false then
+			self.change = true
+			self.HUDVisible = false
+		end
+
+		--INVISIBILITY SYSTEM: HANDLE ACTUAL INVISIBILITY CHANGE
+		if self.change == true then
+			for i = 0, MovableMan:GetMOIDCount() do
+				if MovableMan:GetRootMOID(i) == self.ID then
+					local object = MovableMan:GetMOFromID(i)
+					if
+						not (object:IsDevice()) or (object:IsDevice() and (object.PresetName == "Grot Scout Pistol"))
+					then
+						if self.activeCamo == true then
+							object.Scale = 1
+						else
+							object.Scale = 0
+						end
+					end
+				end
+			end
+
+			if self.activeCamo == true then
+				self.activeCamo = false
+			else
+				self.activeCamo = true
+			end
+
+			self.change = false
+		end
+	else
+		--...IF THE UNIT IS DEAD, PERFORM END LIFE FUNCTIONS
+		for i = 0, MovableMan:GetMOIDCount() do
+			if MovableMan:GetRootMOID(i) == self.ID then
+				local object = MovableMan:GetMOFromID(i)
+				if not (object:IsDevice()) or (object:IsDevice() and (object.PresetName == "Grot Scout Pistol")) then
+					object.Scale = 1
+					self.HUDVisible = true
+				end
+			end
+		end
+		self.RotAngle = self.RotAngle * 0.98
+	end
+end
+
+function UpdateAI(self)
+	self.AI:Update(self)
+end
+
+function Destroy(self)
+	if MovableMan:IsActor(self) == true then
+		self.AngularVel = 0
+	end
+end
